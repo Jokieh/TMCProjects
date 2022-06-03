@@ -6,4 +6,18 @@ public class FromOneToParameter {
 
     }
 
+    public static void printUntilNumber(int number) {
+
+        Integer counter = 1;
+
+        while (counter <= number) {
+
+            System.out.println(counter);
+            counter++;
+
+        }
+
+    }
+
+
 }
