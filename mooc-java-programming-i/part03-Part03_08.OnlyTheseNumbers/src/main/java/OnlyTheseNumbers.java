@@ -17,5 +17,18 @@ public class OnlyTheseNumbers {
             numbers.add(number);
         }
 
+        System.out.println("From where?");
+        Integer start = Integer.valueOf(scanner.nextLine());
+
+        System.out.println("To where?");
+        Integer end = Integer.valueOf(scanner.nextLine());
+
+        for (int i = start; i <= end; i++) {
+
+            System.out.println(numbers.get(i));
+
+        }
+
+
     }
 }
