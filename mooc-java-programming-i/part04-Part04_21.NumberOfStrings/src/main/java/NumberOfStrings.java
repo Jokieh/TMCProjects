@@ -5,6 +5,14 @@ public class NumberOfStrings {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int lineCounter = 0;
+        while (true) {
+            String line = scanner.nextLine();
 
+            if (line.equals("end")) break;
+
+            lineCounter++;
+        }
+        System.out.println(lineCounter);
     }
 }
