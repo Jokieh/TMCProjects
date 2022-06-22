@@ -33,4 +33,40 @@ public class SimpleDate {
         return false;
     }
 
+    private void advanceDay () {
+        if (day < 30) {
+            day++;
+        } else {
+            day = 1;
+            advanceMonth();
+        }
+    }
+
+    private void advanceMonth () {
+        if (month < 12) {
+            month++;
+        } else {
+            month = 1;
+            year++;
+        }
+    }
+
+    public void advance () {
+        advanceDay();
+    }
+
+
+    public void advance (int howManyDays) {
+        for (int i = howManyDays; howManyDays > 0; howManyDays--) {
+            advanceDay();
+        }
+    }
+
+    public SimpleDate afterNumberOfDays(int days) {
+        SimpleDate afterDate = new SimpleDate(this.day, this.month, this.year);
+        for (int i = days; days > 0; days--) {
+            afterDate.advanceDay();
+        }
+        return afterDate;
+    }
 }
