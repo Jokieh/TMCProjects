@@ -1,4 +1,5 @@
 
+import java.lang.reflect.Type;
 import java.util.Objects;
 
 public class Person {
@@ -16,4 +17,11 @@ public class Person {
     }
 
     // implement an equals method here for checking the equality of objects
+    public boolean equals (Object compared) {
+        Person comparedPerson = (Person) compared;
+
+        if (this.name.equals(comparedPerson.name) && this.birthday.equals(comparedPerson.birthday) && this.height == comparedPerson.height && this.weight == comparedPerson.weight) return true;
+
+        return false;
+    }
 }
